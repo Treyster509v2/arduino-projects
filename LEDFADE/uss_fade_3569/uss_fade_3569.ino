@@ -54,14 +54,18 @@ void loop()
  
   // convert the time into a distance
   cm = (duration/2) / 29.1;
-  inches = (duration/2) / 74; 
   
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
+  Serial.println(cm);
+// Serial.print("cm");
+ // Serial.println();
+   d = 2; c = 255;
+  if (cm > 0 && cm < 30){Serial.println("* * * 3");fade(3,0,5,d,c);   }
+   if (cm > 30 && cm < 60){Serial.println("* * * * * 5");fade(5,0,5,d,c);}
+    if (cm > 60 && cm < 90){Serial.println("* * * * * * 6");fade(6,0,5,d,c); }
+     if (cm > 90 && cm < 120){Serial.println("* * * * * * * * * 9");fade(9,0,5,d,c); }
+  
   delay(25);
+  
 }
 
 
@@ -82,5 +86,6 @@ int count = 0;
         delay(d);
         count++;
   }
+  analogWrite(l, 0);
 }
 
