@@ -1,5 +1,5 @@
 // This is the code to recieve data from another arduino using RX and TX
-
+// used this code to begub rxtx
 int incomingByte = 0;   // for incoming serial data
 
 void setup() {
