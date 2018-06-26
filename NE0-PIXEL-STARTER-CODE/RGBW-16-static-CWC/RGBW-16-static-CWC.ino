@@ -9,7 +9,7 @@
 
 #define PIN 6
 
-#define NUM_LEDS 16
+#define NUM_LEDS 23
 
 #define BRIGHTNESS 50
 
@@ -28,87 +28,93 @@ int led, red, green, blue, white;
 int wait = 100;
 
 void loop() {
-
-  led = 0; red = 255; green = 16; blue = 8; white = 10; 
+//RED
+  led = 0; red = 255; green = 0; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
   strip.show();
-  
-  led = 1; red = 255; green = 16; blue = 8; white = 10; 
+ //GREEN 
+  led = 1; red = 0; green = 255; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
   strip.show();
-     
-  led = 2; red = 255; green = 16; blue = 8; white = 10; 
+//BLUE
+  led = 2; red = 0; green = 0; blue = 255; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
   strip.show();
-  
-  led = 3; red = 255; green = 16; blue = 8; white = 10; 
+  //YELLOW
+  led = 3; red = 255; green = 255; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
   strip.show();
-  
-  led = 4; red = 255; green = 16; blue = 8; white = 10; 
+  // CYAN
+  led = 4; red = 0; green = 255; blue = 255; white = 20; 
+  strip.setPixelColor(led, red, green , blue, white);
+  delay(wait);
+   strip.show();
+//MAGENTA
+  led = 5; red = 255; green = 0; blue = 255; white = 20; 
+  strip.setPixelColor(led, red, green , blue, white);
+  delay(wait);
+   strip.show();
+ //ORANGE
+  led = 6; red = 255; green = 127; blue = 0; white = 20; 
+  strip.setPixelColor(led, red, green , blue, white);
+  delay(wait);
+   strip.show();
+// ?
+    led = 7; red = 0; green = 127; blue = 255; white = 20; 
+  strip.setPixelColor(led, red, green , blue, white);
+  delay(wait);
+   strip.show();
+//
+    led = 8; red = 127; green = 255; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
 
-  led = 5; red = 255; green = 16; blue = 8; white = 10; 
-  strip.setPixelColor(led, red, green , blue, white);
-  delay(wait);
-   strip.show();
- 
-  led = 6; red = 255; green = 16; blue = 8; white = 10; 
+    led = 9; red = 63; green = 63; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
 
-    led = 7; red = 255; green = 16; blue = 8; white = 10; 
+    led = 10; red = 0; green = 63; blue = 63; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
 
-    led = 8; red = 255; green = 16; blue = 8; white = 10; 
-  strip.setPixelColor(led, red, green , blue, white);
-  delay(wait);
-   strip.show();
-
-    led = 9; red = 255; green = 16; blue = 8; white = 10; 
-  strip.setPixelColor(led, red, green , blue, white);
-  delay(wait);
-   strip.show();
-
-    led = 10; red = 255; green = 16; blue = 8; white = 10; 
-  strip.setPixelColor(led, red, green , blue, white);
-  delay(wait);
-   strip.show();
-
-    led = 11; red = 255; green = 16; blue = 8; white = 10; 
+    led = 11; red = 0; green = 16; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
    
-    led = 12; red = 255; green = 16; blue = 8; white = 10; 
+    led = 12; red = 0; green = 32; blue = 16; white = 10; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
    
-    led = 13; red = 255; green = 16; blue = 8; white = 10; 
+    led = 13; red = 0; green = 63; blue = 255; white = 10; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
    strip.show();
    
-   led = 14; red = 255; green = 16; blue = 8; white = 10; 
+   led = 14; red = 255; green = 63; blue = 0; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);  
    strip.show();
-  
-  led = 15; red = 255; green = 16; blue = 8; white = 10; 
+  // WHITE
+  led = 15; red = 255; green = 255; blue = 255; white = 20; 
   strip.setPixelColor(led, red, green , blue, white);
   delay(wait);
   strip.show();
-   
+  for (int i = 16; i < 23; i++){
+   led = i; red = 0; green = 255; blue = 0; white = 50; 
+  strip.setPixelColor(led, red, green , blue, white);
+  delay(wait);
+  strip.show();
+  }
+;
    
 }
 
