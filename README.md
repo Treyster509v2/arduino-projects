@@ -1,5 +1,10 @@
 
 <pre>
+
+IRLib2
+https://github.com/cyborg5/IRLib2
+
+
 # arduino-projects
 - NEO PIXEL
 https://github.com/adafruit/Adafruit_NeoPixel
