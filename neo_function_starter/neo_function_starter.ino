@@ -8,22 +8,22 @@
 #define PIN 6
 #define NUM_LEDS 16
 #define BRIGHTNESS 50
-
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRBW + NEO_KHZ800);
-
-
+// *******************************************************
 void setup() {
   Serial.begin(115200);
   strip.setBrightness(BRIGHTNESS);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
 }
-
+// *******************************************************
 // Initialize some variables for the void loop()
 // global vaiables
 int led, red, green, blue, white;
 int wait = 100;
 int count = 0;
+// *******************************************************
+
 void loop() {
   red = 255;  green = 0; blue = 255; white = 10; led = 16;
   if (count = 0) neo_black(0,0,0,0,16);
